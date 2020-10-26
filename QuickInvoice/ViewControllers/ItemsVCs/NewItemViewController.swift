@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NewItemViewController: UIViewController {
+class NewItemViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var itemNameTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
@@ -60,6 +60,7 @@ class NewItemViewController: UIViewController {
 extension NewItemViewController {
     func setup() {
         self.isModalInPresentation = true
+        self.hideKeyboardWhenTappedAround()
         
         descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
         descriptionTextView.layer.borderWidth = 1
@@ -75,15 +76,5 @@ extension NewItemViewController {
             itemKeyTextField.text = item!.itemKey
             
         }
-    }
-}
-
-extension NewItemViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.view.frame.origin.y -= 150
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.view.frame.origin.y = 0
     }
 }

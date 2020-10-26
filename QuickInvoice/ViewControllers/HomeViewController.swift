@@ -75,7 +75,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         case 1:
             let storyboard = UIStoryboard(name: "CurUserInformation", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "editInfoVC")
-            vc.modalPresentationStyle = .overFullScreen
+            vc.modalPresentationStyle = .popover
             
             self.present(vc, animated: true)
         case 2:

@@ -11,7 +11,7 @@
         <!--New Invoice View Controller-->
         <scene sceneID="klI-a6-QfR">
             <objects>
-                <viewController storyboardIdentifier="newInvoiceVC" id="lsa-8u-Eol" customClass="NewInvoiceViewController" customModule="QuickInvoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newInvoiceVC" id="lsa-8u-Eol" customClass="NewInvoiceViewController" customModule="Quick_Invoice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L1Z-9a-0m7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +137,7 @@
                                         <rect key="frame" x="0.0" y="537" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBM-0h-sVd">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sBM-0h-sVd">
                                                 <rect key="frame" x="25" y="10" width="381" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -164,7 +164,7 @@
                                         <rect key="frame" x="0.0" y="640" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odU-XY-Gcp">
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odU-XY-Gcp">
                                                 <rect key="frame" x="25" y="10" width="381" height="34"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
@@ -267,7 +267,7 @@
         <!--Invoice Items View Controller-->
         <scene sceneID="fDc-Cp-u4c">
             <objects>
-                <viewController id="uuV-h3-HkX" customClass="InvoiceItemsViewController" customModule="QuickInvoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uuV-h3-HkX" customClass="InvoiceItemsViewController" customModule="Quick_Invoice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4j-2F-m8H">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,7 +388,7 @@
         <!--New Invoice Item View Controller-->
         <scene sceneID="BXJ-r8-urT">
             <objects>
-                <viewController id="QyI-oe-SYX" customClass="NewInvoiceItemViewController" customModule="QuickInvoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QyI-oe-SYX" customClass="NewInvoiceItemViewController" customModule="Quick_Invoice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rJC-Nf-yVa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,7 +494,7 @@
         <!--Preview View Controller-->
         <scene sceneID="GF1-mf-qV4">
             <objects>
-                <viewController id="750-jm-nGI" customClass="PDFPreviewViewController" customModule="QuickInvoice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="750-jm-nGI" customClass="PDFPreviewViewController" customModule="Quick_Invoice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K57-Zx-MP4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Client" representedClassName="Client" syncable="YES" codeGenerationType="class">
+        <attribute name="clientName" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="restofAddress" optional="YES" attributeType="String"/>
+        <attribute name="streetAddress" optional="YES" attributeType="String"/>
+        <attribute name="telephone" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Invoice" representedClassName="Invoice" syncable="YES" codeGenerationType="class">
+        <attribute name="actualTotal" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="comment" optional="YES" attributeType="String"/>
+        <attribute name="estimatedTotal" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="invoiceDate" optional="YES" attributeType="String"/>
+        <attribute name="invoiceTitle" optional="YES" attributeType="String"/>
+        <attribute name="jobDescription" optional="YES" attributeType="String"/>
+        <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client"/>
+        <relationship name="invoiceItems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="InvoiceItem"/>
+        <relationship name="userInformation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserInformation"/>
+    </entity>
+    <entity name="InvoiceItem" representedClassName=".InvoiceItem" syncable="YES" codeGenerationType="class">
+        <attribute name="actualQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="estimatedQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
+        <attribute name="itemDescription" optional="YES" attributeType="String"/>
+        <attribute name="itemKey" optional="YES" attributeType="String"/>
+        <attribute name="itemName" optional="YES" attributeType="String"/>
+        <attribute name="itemPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserInformation" representedClassName="UserInformation" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="restofAddress" optional="YES" attributeType="String"/>
+        <attribute name="streetAddress" optional="YES" attributeType="String"/>
+        <attribute name="telephone" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Client" positionX="-54" positionY="54" width="128" height="118"/>
+        <element name="Invoice" positionX="-63" positionY="54" width="128" height="178"/>
+        <element name="InvoiceItem" positionX="-54" positionY="18" width="128" height="88"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="UserInformation" positionX="-45" positionY="45" width="128" height="118"/>
+    </elements>
+</model>

@@ -15,6 +15,7 @@ class NewInvoiceItemViewController: UIViewController {
     @IBOutlet weak var estimatedQuantityTextField: UITextField!
     @IBOutlet weak var actualQuantityTextField: UITextField!
     @IBOutlet weak var chooseSavedItemButton: UIButton!
+    @IBOutlet weak var itemDescriptionTextView: UITextView!
     var previousInvoiceItem: InvoiceItem?
     var selectedItem: Item?
     var senderVC: InvoiceItemsViewController!
@@ -42,6 +43,7 @@ class NewInvoiceItemViewController: UIViewController {
             newInvoiceItem.setValue(selectedItem, forKey: "item")
             newInvoiceItem.setValue(Int16(actualQuantityTextField.text ?? "0") ?? 0, forKey: "actualQuantity")
             newInvoiceItem.setValue(Int16(estimatedQuantityTextField.text ?? "0") ?? 0, forKey: "estimatedQuantity")
+            newInvoiceItem.setValue(itemDescriptionTextView.text ?? "", forKey: "itemDescription")
             
             save()
             
@@ -51,6 +53,7 @@ class NewInvoiceItemViewController: UIViewController {
             previousInvoiceItem!.setValue(selectedItem, forKey: "item")
             previousInvoiceItem!.setValue(Int16(actualQuantityTextField.text ?? "0") ?? 0, forKey: "actualQuantity")
             previousInvoiceItem!.setValue(Int16(estimatedQuantityTextField.text ?? "0") ?? 0, forKey: "estimatedQuantity")
+            previousInvoiceItem!.setValue(itemDescriptionTextView.text ?? "", forKey: "itemDescription")
             
             save()
         
@@ -71,6 +74,9 @@ extension NewInvoiceItemViewController {
             estimatedQuantityTextField.text = "\(pii.estimatedQuantity)"
             actualQuantityTextField.text = "\(pii.actualQuantity)"
         }
+        itemDescriptionTextView.layer.borderWidth = 1
+        itemDescriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
+        itemDescriptionTextView.layer.cornerRadius = 3
     }
 }
 

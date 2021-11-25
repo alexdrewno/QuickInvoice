@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class NewItemViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var itemNameTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var itemKeyTextField: UITextField!
@@ -38,12 +37,10 @@ class NewItemViewController: UIViewController, UITextFieldDelegate {
         if item != nil {
             updateItem(item: self.item!,
                        itemName: itemNameTextField.text!,
-                       itemDescription: descriptionTextView.text,
                        itemPrice: itemPrice,
                        itemKey: itemKeyTextField.text!)
         } else {
             postNewItem(itemName: itemNameTextField.text!,
-                        itemDescription: descriptionTextView.text,
                         itemPrice: itemPrice,
                         itemKey: itemKeyTextField.text!)
         }
@@ -62,15 +59,11 @@ extension NewItemViewController {
         self.isModalInPresentation = true
         self.hideKeyboardWhenTappedAround()
         
-        descriptionTextView.layer.borderColor = UIColor.lightGray.cgColor
-        descriptionTextView.layer.borderWidth = 1
-        
         priceTextField.keyboardType = .numbersAndPunctuation
         itemKeyTextField.delegate = self
         priceTextField.delegate = self
         
         if item != nil {
-            descriptionTextView.text = item!.itemDescription
             itemNameTextField.text = item!.itemName
             priceTextField.text = String(format: "%.2f", item!.itemPrice)
             itemKeyTextField.text = item!.itemKey

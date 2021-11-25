@@ -30,7 +30,7 @@ func deleteInvoice(invoice: Invoice) {
                 }
                 
                 managedContext.delete(invoiceData)
-                
+            
                 save()
             }
         }
@@ -173,12 +173,11 @@ func deleteInvoiceItem(invoiceItem: InvoiceItem) {
 
 
 //MARK: - Item Coredata Methods
-func postNewItem(itemName: String, itemDescription: String, itemPrice: Float, itemKey: String) {
+func postNewItem(itemName: String, itemPrice: Float, itemKey: String) {
     let entity = NSEntityDescription.entity(forEntityName: "Item", in: managedContext)
     let newItem = NSManagedObject(entity: entity!, insertInto: managedContext)
     
     newItem.setValue(itemName, forKey: "itemName")
-    newItem.setValue(itemDescription, forKey: "itemDescription")
     newItem.setValue(itemKey, forKey: "itemKey")
     newItem.setValue(itemPrice, forKey: "itemPrice")
     
@@ -222,7 +221,7 @@ func deleteItem(item: Item) {
     }
 }
 
-func updateItem(item: Item, itemName: String, itemDescription: String, itemPrice: Float, itemKey: String) {
+func updateItem(item: Item, itemName: String, itemPrice: Float, itemKey: String) {
     let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Item")
     request.returnsObjectsAsFaults = true
         
@@ -231,7 +230,6 @@ func updateItem(item: Item, itemName: String, itemDescription: String, itemPrice
         for data in result as! [NSManagedObject] {
             let itemData = data as! Item
             if itemData == item {
-                itemData.itemDescription = itemDescription
                 itemData.itemName = itemName
                 itemData.itemPrice = itemPrice
                 itemData.itemKey = itemKey

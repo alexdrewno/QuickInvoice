@@ -338,7 +338,7 @@ class PDFCreator: NSObject {
             
 
             
-            let itemdescription = NSAttributedString(string: item.item?.itemDescription ?? "", attributes: textAttributes)
+            let itemdescription = NSAttributedString(string: item.itemDescription ?? "", attributes: textAttributes)
             boundingrect = itemdescription.boundingRect(with: CGSize(width: 250, height: 40), options: .usesLineFragmentOrigin, context: nil)
           
             if boundingrect.height >= 16 {

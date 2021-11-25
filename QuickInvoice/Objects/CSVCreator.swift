@@ -61,10 +61,10 @@ class CSVCreator: NSObject {
     
     static func createItemsCSV(items: [Item]) -> String{
         var csvString = ""
-        csvString += "Name,Key,Description,Price\n"
+        csvString += "Name,Key,Price\n"
         
         for i in items {
-            csvString += "\(i.itemName ?? ""),\(i.itemKey ?? ""),\(i.itemDescription ?? ""),\(String(i.itemPrice))\n"
+            csvString += "\(i.itemName ?? ""),\(i.itemKey ?? ""),\(String(i.itemPrice))\n"
         }
         
         return csvString
@@ -157,7 +157,7 @@ class CSVCreator: NSObject {
             let estimatedItemCost = item.item?.itemPrice ?? 0 * Float(item.estimatedQuantity)
             let actualItemCost = item.item?.itemPrice ?? 0 * Float(item.actualQuantity)
             
-            bodyString += "\(item.item?.itemName ?? ""), \(item.item?.itemDescription ?? ""), $\(String(format: "%.2f", item.item?.itemPrice ?? 0)), "
+            bodyString += "\(item.item?.itemName ?? ""), \(item.itemDescription ?? ""), $\(String(format: "%.2f", item.item?.itemPrice ?? 0)), "
             bodyString += "\(item.estimatedQuantity), $\(String(format: "%.2f", estimatedItemCost)), \(item.actualQuantity), $\(String(format: "%.2f", actualItemCost))\n"
         }
 

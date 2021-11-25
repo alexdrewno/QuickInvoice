@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Client" representedClassName="Client" syncable="YES" codeGenerationType="class">
         <attribute name="clientName" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
@@ -21,10 +21,10 @@
     <entity name="InvoiceItem" representedClassName=".InvoiceItem" syncable="YES" codeGenerationType="class">
         <attribute name="actualQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="estimatedQuantity" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="itemDescription" optional="YES" attributeType="String"/>
         <relationship name="item" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Item"/>
     </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="itemDescription" optional="YES" attributeType="String"/>
         <attribute name="itemKey" optional="YES" attributeType="String"/>
         <attribute name="itemName" optional="YES" attributeType="String"/>
         <attribute name="itemPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -39,8 +39,8 @@
     <elements>
         <element name="Client" positionX="-54" positionY="54" width="128" height="118"/>
         <element name="Invoice" positionX="-63" positionY="54" width="128" height="178"/>
-        <element name="InvoiceItem" positionX="-54" positionY="18" width="128" height="88"/>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="InvoiceItem" positionX="-54" positionY="18" width="128" height="89"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="74"/>
         <element name="UserInformation" positionX="-45" positionY="45" width="128" height="118"/>
     </elements>
 </model>
